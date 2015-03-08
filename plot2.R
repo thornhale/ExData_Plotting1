@@ -1,3 +1,6 @@
+# To use this script call plot2 with the string that specifies location of input
+# file. E.g.: fileLocation="./household_power_consumption.txt" indictes that 
+# the input file is located in the current directory.
 plot2 <- function(fileLocation){
   powerData <- read.table(fileLocation, sep=";", na.strings='?', header=TRUE)
   powerData[1] <- as.Date(powerData$Date, '%e/%m/%Y')
